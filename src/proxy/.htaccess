@@ -1,0 +1,9 @@
+RewriteEngine on
+
+# Change URL below to your specific referrer or it won't work
+# This is done for security reasons, so the /proxy directory can only
+# be accessed by users that are referred from your main site
+RewriteCond %{HTTP_REFERER} ^http://localhost:3000/
+RewriteRule ^ - [L]
+
+RewriteRule ^ - [F]
